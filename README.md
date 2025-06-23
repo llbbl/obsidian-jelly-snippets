@@ -108,6 +108,28 @@ This plugin also reminds me of LaTeX2Unicode, a neovim plugin which I used exten
 
 It's since been incorporated back into [julia.vim](https://github.com/JuliaEditorSupport/julia-vim). I didn't originally mean to write a plugin that could provide this kind of functionality - but I suppose the concept of text translation is really useful!
 
+## Development
+
+### Testing
+
+This plugin uses Jest for automated testing of its core functionality.
+
+**Run tests:**
+```bash
+npm test
+```
+
+**Run tests with coverage report:**
+```bash
+npm run test:coverage
+```
+
+The test suite covers:
+- Symbol parsing and replacement functionality
+- Snippet type definitions and validation
+- Edge cases and error handling
+- TypeScript type safety
+
 ## Future Improvements/TODO
 
 - [x] Control characters in snippets (whitespace only)
@@ -115,7 +137,7 @@ It's since been incorporated back into [julia.vim](https://github.com/JuliaEdito
 - [ ] Regex capabilities - at least on selection.
 - [ ] A backup for snippets - or a way of specifying snippets in a file, to modularize snippets. May be useful if regex snippets need to be defined separately from text snippets.
 - [ ] Bugfixes and auditing.
-- [ ] AUTOMATED TESTING. Use Jest.
+- [x] AUTOMATED TESTING. Use Jest.
 - [ ] Do the things liamcain suggested in my plugin PR to the Obsidian plugin repo. (one half done)
 - [ ] Working with Obsidians template stuff.
 - [ ] REWRITE: CodeMirror editor extension. [See here on state fields.](https://docs.obsidian.md/Plugins/Editor/State+fields) This should also make things such as tabstops and working in live preview possible, but I don't know for sure. This would mark a version upgrade.
